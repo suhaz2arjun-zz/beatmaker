@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="shortcut icon" href=""> -->
+    <title>BeatMaker</title>
+  </head>
+  <body>
+    <div class="sequencer">
+      <div class="kick-track">
+        <div class="controls">
+          <h1>Kickas</h1>
+          <button data-track="0" class="mute kick-volume">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <select name="kick-select" id="kick-select">
+            <option value="./sounds/kick_1.wav">Kick 1</option>
+            <option value="./sounds/kick_2.wav">Kick 2</option>
+            <option value="./sounds/kick_3.wav">Kick 3</option>
+          </select>
+        </div>
+        <div class="kick">
+          <div class="pad kick-pad b0"></div>
+          <div class="pad kick-pad b1"></div>
+          <div class="pad kick-pad b2"></div>
+          <div class="pad kick-pad b3"></div>
+          <div class="pad kick-pad b4"></div>
+          <div class="pad kick-pad b5"></div>
+          <div class="pad kick-pad b6"></div>
+          <div class="pad kick-pad b7"></div>
+        </div>
+      </div>
+      <div class="snare-track">
+        <div class="controls">
+          <h1>Snare</h1>
+          <button data-track="1" class="mute snare-volume">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <select name="snare-select" id="snare-select">
+            <option value="./sounds/snare_1.wav">Snare 1</option>
+            <option value="./sounds/snare_2.wav">Snare 2</option>
+            <option value="./sounds/snare_3.wav">Snare 3</option>
+            <option value="./sounds/snare_4.wav">Snare 4</option>
+            <option value="./sounds/snare_5.wav">Snare 5</option>
+            <option value="./sounds/snare_6.wav">Snare 6</option>
+            <option value="./sounds/snare_7.wav">Snare 7</option>
+          </select>
+        </div>
+        <div class="snare">
+          <div class="pad snare-pad b0"></div>
+          <div class="pad snare-pad b1"></div>
+          <div class="pad snare-pad b2"></div>
+          <div class="pad snare-pad b3"></div>
+          <div class="pad snare-pad b4"></div>
+          <div class="pad snare-pad b5"></div>
+          <div class="pad snare-pad b6"></div>
+          <div class="pad snare-pad b7"></div>
+        </div>
+      </div>
+      <div class="hithat-track">
+        <div class="controls">
+          <h1>Hithat</h1>
+          <button data-track="2" class="mute hithat-volume">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <select name="hithat-select" id="hithat-select">
+            <option value="./sounds/hithat_bass.wav">Hithat Bass</option>
+            <option value="./sounds/hithat_1.wav">Hithat 1</option>
+            <option value="./sounds/hithat_2.wav">Hithat 2</option>
+            <option value="./sounds/hithat_3.wav">Hithat 3</option>
+            <option value="./sounds/hithat_4.wav">Hithat 4</option>
+            <option value="./sounds/hithat_5.wav">Hithat 5</option>
+          </select>
+        </div>
+        <div class="hithat">
+          <div class="pad hithat-pad b0"></div>
+          <div class="pad hithat-pad b1"></div>
+          <div class="pad hithat-pad b2"></div>
+          <div class="pad hithat-pad b3"></div>
+          <div class="pad hithat-pad b4"></div>
+          <div class="pad hithat-pad b5"></div>
+          <div class="pad hithat-pad b6"></div>
+          <div class="pad hithat-pad b7"></div>
+        </div>
+      </div>
+      <button class="play">Play</button>
+      <div class="tempo">
+        <input
+          type="range"
+          class="tempo-slider"
+          max="300"
+          min="20"
+          value="150"
+        />
+        <p>Tempo:<span class="tempo-nr">150</span></p>
+      </div>
+    </div>
+    <audio class="kick-sound" src="./sounds/kick_1.wav"></audio>
+    <audio class="snare-sound" src="./sounds/snare_1.wav"></audio>
+    <audio class="hithat-sound" src="./sounds/hithat_bass.wav"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
